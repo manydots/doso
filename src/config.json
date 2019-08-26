@@ -1,0 +1,29 @@
+{
+	"template":{
+		"react":{
+			"path":"temple/react",
+			"tempName":"react",
+			"description":"react测试模板",
+			"gitUrl": "https://github.com/manydots/temple.git",
+			"branch": "master"
+		},
+		"vue":{
+			"path":"temple/vue",
+			"tempName":"vue",
+			"description":"vue测试模板TEST",
+			"gitUrl": "https://github.com/manydots/vue.git",
+			"branch": "master"
+		},
+		"jeq":{
+			"path":"temple/jeq",
+			"tempName":"jeq",
+			"description":"jeq",
+			"gitUrl": "https://github.com/manydots/jeq.git",
+			"branch": "master"
+		}
+	},
+	"description":{
+		"tplText":"Template name (you can input one like react, vue, angular): ",
+		"projectText":"Project name: "
+	}
+}

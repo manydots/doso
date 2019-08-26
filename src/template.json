@@ -1,0 +1,8 @@
+{
+	"tpl": {
+		"react": {
+			"url": "https://github.com/manydots/temple.git",
+			"branch": "master"
+		}
+	}
+}
