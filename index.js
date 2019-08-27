@@ -21,12 +21,27 @@ program
 	.alias('i')
 	.action((name) => {
 		require('./cmd/init')(name);
+		require('./cmd/check')(true);
+	})
+program
+	.command('update')
+	.description('update this tools')
+	.alias('ud')
+	.action((up) => {
+		require('./cmd/update')(up);
+	})
+program
+	.command('uninstall')
+	.description('uninstall this tools')
+	.alias('rm')
+	.action(() => {
+		require('./cmd/uninstall')();
 	})
 
 //添加一些有用的信息到help选项
 program.on('--help', () => {
-  console.log('')
-  console.log(`Run ${chalk.cyan(`just <command> --help`)} for detailed usage of given command.`)
-  console.log('')
+  //console.log('')
+  //console.log(`Run ${chalk.cyan(`just <command> --help`)} for detailed usage of given command.`)
+  //console.log('')
 })
 program.parse(process.argv)
