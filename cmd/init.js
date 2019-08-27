@@ -9,7 +9,7 @@ const ora = require('ora');
 const chalk = require('chalk');
 //const symbols = require('log-symbols');
 const exec = require('child_process').exec;
-const config = require('../src/config.json');
+const config = require('../config.json');
 
 module.exports = (projectName) => {
   //console.log(projectName)
@@ -75,7 +75,8 @@ module.exports = (projectName) => {
               name: 'cnpm',
               message: '是否使用cnpm',
               type: 'confirm',
-              when: function(answers) { // 当install为true的时候才会提问当前问题
+              when: function(answers) {
+                // 当install为true的时候才会提醒
                 return answers.install
               }
             }]).then((req) => {

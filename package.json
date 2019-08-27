@@ -1,10 +1,10 @@
 {
   "name": "doso",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "a tool service for web",
-  "main": "./src/index.js",
+  "main": "index.js",
   "bin": {
-    "just": "./src/index.js"
+    "just": "index.js"
   },
   "scripts": {
     "pre": "node index.js",
