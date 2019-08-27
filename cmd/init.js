@@ -39,10 +39,14 @@ module.exports = (projectName) => {
       // }
     }]).then((answers) => {
       //console.log(answers.type)
+      
+      require('./check')(true);
+
       if (!config || !config.template[answers.type]) {
         console.log(chalk.red(`\n ${answers.type} 该模板不存在!`))
         process.exit();
       }
+
       const spinner = ora('正在下载模板...');
       spinner.start();
       let gitUrl = config.template[answers.type].gitUrl;
@@ -54,6 +58,7 @@ module.exports = (projectName) => {
           console.log(chalk.red(err));
 
         } else {
+
           spinner.succeed();
           const fileName = `${projectName}/package.json`;
           const meta = {
@@ -103,6 +108,8 @@ module.exports = (projectName) => {
   } else {
     // 错误提示项目已存在，避免覆盖原有项目
     //做一些处理
+
     console.log(chalk.red('项目已存在'));
+    process.exit();
   }
 }
