@@ -61,6 +61,7 @@ module.exports = (projectName) => {
 
           spinner.succeed();
           const fileName = `${projectName}/package.json`;
+          //写入 fie.config.js
           const meta = {
             name: projectName,
             description: answers.description,

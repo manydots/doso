@@ -37,7 +37,7 @@ module.exports = (options) => {
           if (req && req.update) {
             const spinners = ora(`${npmType}正在更新${chalk.cyan(latest)}`);
             spinners.start();
-            exec(`${npmType} install -g doso`, function(err, stdout, stderr) {
+            exec(`${npmType} install -g doso -f`, function(err, stdout, stderr) {
               if(err){
                 process.exit();
               }

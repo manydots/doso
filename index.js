@@ -14,8 +14,6 @@ program
 		console.log(process.cwd())
 	})
 program
-	.usage('<command> [options] 快速启动项目') //-h 打印的用户提示
-program
 	.command('init <name>')
 	.description('create a new project')
 	.alias('i')
@@ -36,6 +34,13 @@ program
 	.alias('rm')
 	.action(() => {
 		require('./cmd/uninstall')();
+	})
+program
+	.command('prefix')
+	.description('npm config get prefix')
+	.alias('pf')
+	.action(() => {
+		require('./cmd/prefix')(true);
 	})
 
 //添加一些有用的信息到help选项
