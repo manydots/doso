@@ -1,6 +1,6 @@
 {
   "name": "doso",
-  "version": "1.0.30",
+  "version": "1.0.31",
   "description": "a tool service for web",
   "main": "index.js",
   "bin": {
